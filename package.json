@@ -9,14 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@supabase/supabase-js": "^2.49.8",
-    "clsx": "^2.1.1",
     "install": "^0.13.0",
-    "motion": "^12.14.0",
     "next": "15.3.2",
+    "next-globe-gen": "^1.4.3",
+    "next-intl": "^4.1.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "tailwind-merge": "^3.3.0"
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "typescript": "^5",
