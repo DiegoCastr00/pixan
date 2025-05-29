@@ -1,16 +1,9 @@
 import { useTranslations } from "next-intl";
-// Alternativamente, para obtener un traductor sin hooks (útil fuera de componentes o en funciones):
-// import {getTranslator} from 'next-intl/server';
 
 export default function HomePage() {
   const t = useTranslations("HomePage");
-  // const tNav = useTranslations('Navigation'); // Para otra sección del JSON
 
-  // Ejemplo con getTranslator (si lo necesitas fuera de un hook)
-  // const translator = await getTranslator(params.locale, 'HomePage');
-  // translator('title')
-
-  const userName = "Usuario"; // Podrías obtener esto de una sesión, etc.
+  const userName = "Usuario";
 
   return (
     <div>

@@ -2,7 +2,6 @@ import { useTranslations } from "next-intl";
 import { Metadata } from "next";
 import { generatePageMetadata } from "@/lib/metadata";
 
-// Función para generar metadatos dinámicos para la página About
 export async function generateMetadata({
   params,
 }: {
@@ -13,7 +12,7 @@ export async function generateMetadata({
 }
 
 export default function AboutPage() {
-  const t = useTranslations("Navigation"); // Usando el namespace de navegación
+  const t = useTranslations("Navigation");
 
   return (
     <div>
