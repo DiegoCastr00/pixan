@@ -1,10 +1,7 @@
-import type { NextConfig } from "next";
-import createNextGlobeGenPlugin from "next-globe-gen/plugin";
-
-const withNextGlobeGen = createNextGlobeGenPlugin();
-
-const nextConfig: NextConfig = {
-  /* Next.js config options here */
-};
-
-export default withNextGlobeGen(nextConfig);
+import {NextConfig} from 'next';
+import createNextIntlPlugin from 'next-intl/plugin';
+ 
+const nextConfig: NextConfig = {};
+ 
+const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
+export default withNextIntl(nextConfig);
