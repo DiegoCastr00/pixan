@@ -1,4 +1,20 @@
 {
-  "title": "Homepage",
-  "description": "{name} package provides seamless internationalization experience for Next.js App Router devs."
+  "HomePage": {
+    "title": "Welcome to our Application!",
+    "greeting": "Hello, {name}!",
+    "description": "This is an example page to demonstrate internationalization."
+  },
+  "Navigation": {
+    "home": "Home",
+    "about": "About"
+  },
+  "Metadata": {
+    "title": "My Multi-language App - Home",
+    "description": "Multi-language web application built with Next.js and next-intl. Full support for Spanish, English, and German.",
+    "keywords": "web application, multilingual, Next.js, internationalization, english",
+    "about": {
+      "title": "About - My Multi-language App",
+      "description": "Learn more about our multi-language web application and our development team."
+    }
+  }
 }

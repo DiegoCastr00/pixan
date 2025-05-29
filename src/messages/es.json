@@ -1,4 +1,20 @@
 {
-  "title": "Página de inicio",
-  "description": "{name} proporciona una experiencia de internacionalización sin complicaciones para los desarrolladores de Next.js App Router."
+  "HomePage": {
+    "title": "¡Bienvenido a nuestra Aplicación!",
+    "greeting": "¡Hola, {name}!",
+    "description": "Esta es una página de ejemplo para demostrar la internacionalización."
+  },
+  "Navigation": {
+    "home": "Inicio",
+    "about": "Acerca de"
+  },
+  "Metadata": {
+    "title": "Mi App Multi-idioma - Inicio",
+    "description": "Aplicación web multiidioma creada con Next.js y next-intl. Soporte completo para español, inglés y alemán.",
+    "keywords": "aplicación web, multiidioma, Next.js, internacionalización, español",
+    "about": {
+      "title": "Acerca de - Mi App Multi-idioma",
+      "description": "Conoce más sobre nuestra aplicación web multiidioma y nuestro equipo de desarrollo."
+    }
+  }
 }

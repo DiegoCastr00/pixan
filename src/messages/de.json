@@ -1,5 +1,20 @@
 {
-  "IndexPage": {
-    "title": "Hallo Welt"
+  "HomePage": {
+    "title": "Willkommen in unserer Anwendung!",
+    "greeting": "Hallo, {name}!",
+    "description": "Dies ist eine Beispielseite zur Demonstration der Internationalisierung."
+  },
+  "Navigation": {
+    "home": "Startseite",
+    "about": "Über uns"
+  },
+  "Metadata": {
+    "title": "Meine Mehrsprachige App - Startseite",
+    "description": "Mehrsprachige Webanwendung erstellt mit Next.js und next-intl. Vollständige Unterstützung für Spanisch, Englisch und Deutsch.",
+    "keywords": "Webanwendung, mehrsprachig, Next.js, Internationalisierung, deutsch",
+    "about": {
+      "title": "Über uns - Meine Mehrsprachige App",
+      "description": "Erfahren Sie mehr über unsere mehrsprachige Webanwendung und unser Entwicklungsteam."
+    }
   }
 }
