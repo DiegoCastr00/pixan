@@ -2,10 +2,12 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import LanguageSwitcher from "./components/LanguageSwitcher";
+import LanguageSwitcher from "../../components/navigation/LanguageSwitcher";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import { generatePageMetadata } from "@/lib/metadata";
+import "./globals.css";
+import Header from "@/components/navigation/header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -49,7 +51,7 @@ export default async function RootLayout({
   };
 
   return (
-    <html lang={locale}>
+    <html lang={locale} suppressHydrationWarning>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -69,19 +71,7 @@ export default async function RootLayout({
       </head>
       <body className={inter.className}>
         <NextIntlClientProvider locale={locale}>
-          <header
-            style={{
-              padding: "1rem",
-              borderBottom: "1px solid #ccc",
-              marginBottom: "1rem",
-            }}
-          >
-            <nav style={{ display: "flex", gap: "1rem" }}>
-              <Link href="/">Home</Link>
-              <Link href="/about">About</Link>
-              <LanguageSwitcher />
-            </nav>
-          </header>
+          <Header />
           {children}
         </NextIntlClientProvider>
       </body>

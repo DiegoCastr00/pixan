@@ -6,7 +6,7 @@ export default function HomePage() {
   const userName = "Usuario";
 
   return (
-    <div>
+    <div className="flex flex-col items-center justify-center h-screen ">
       <h1>{t("title")}</h1>
       <p>{t("greeting", { name: userName })}</p>
       <p>{t("description")}</p>
