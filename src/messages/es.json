@@ -6,7 +6,20 @@
   },
   "Navigation": {
     "home": "Inicio",
-    "about": "Acerca de"
+    "about": "Acerca de",
+    "certificates": "Certificados",
+    "viewCertificates": "Ver Certificados",
+    "requestCertificate": "Solicitar Certificado",
+    "validateCertificate": "Validar Certificado",
+    "honey": "Miel",
+    "honeyProducts": "Productos de Miel",
+    "productionProcess": "Proceso de Producción",
+    "qualityCertification": "Calidad y Certificación",
+    "wine": "Vino",
+    "wineCatalog": "Catálogo de Vinos",
+    "elaborationProcess": "Proceso de Elaboración",
+    "originDenomination": "Denominación de Origen",
+    "aboutUs": "Sobre Nosotros"
   },
   "Metadata": {
     "title": "Sin nombre",

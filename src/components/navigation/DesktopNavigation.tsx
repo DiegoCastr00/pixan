@@ -2,9 +2,11 @@ import { useState } from "react";
 import { navigationItems } from "@/constants/navigation";
 import { Link } from "@/i18n/navigation";
 import { IconChevronDown } from "@tabler/icons-react";
+import { useTranslations } from "next-intl";
 
 const DesktopNavigation = () => {
   const [activeDropdown, setActiveDropdown] = useState<number | null>(null);
+  const t = useTranslations();
 
   return (
     <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center">
@@ -17,7 +19,7 @@ const DesktopNavigation = () => {
               onMouseEnter={() => item.hasDropdown && setActiveDropdown(index)}
             >
               <item.icon size={18} />
-              <span className="font-medium">{item.name}</span>
+              <span className="font-medium">{t(item.name)}</span>
               {item.hasDropdown && (
                 <IconChevronDown
                   size={16}
@@ -41,7 +43,7 @@ const DesktopNavigation = () => {
                       href={dropdownItem.href}
                       className="block px-4 py-3 text-gray-700 hover:bg-emerald-50 hover:text-emerald-800 transition-colors duration-200"
                     >
-                      {dropdownItem.name}
+                      {t(dropdownItem.name)}
                     </Link>
                   ))}
                 </div>

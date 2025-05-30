@@ -7,39 +7,42 @@ import {
 
 export const navigationItems = [
   {
-    name: "Certificados",
+    name: "Navigation.certificates",
     href: "/certificados",
     icon: IconFileCertificate,
     hasDropdown: true,
     dropdownItems: [
-      { name: "Ver Certificados", href: "/certificados" },
-      { name: "Solicitar Certificado", href: "/certificados/solicitar" },
-      { name: "Validar Certificado", href: "/certificados/validar" },
+      { name: "Navigation.viewCertificates", href: "/certificados" },
+      {
+        name: "Navigation.requestCertificate",
+        href: "/certificados/solicitar",
+      },
+      { name: "Navigation.validateCertificate", href: "/certificados/validar" },
     ],
   },
   {
-    name: "Miel",
+    name: "Navigation.honey",
     href: "/miel",
     icon: IconCoffee,
     dropdownItems: [
-      { name: "Productos de Miel", href: "/miel/productos" },
-      { name: "Proceso de Producción", href: "/miel/proceso" },
-      { name: "Calidad y Certificación", href: "/miel/calidad" },
+      { name: "Navigation.honeyProducts", href: "/miel/productos" },
+      { name: "Navigation.productionProcess", href: "/miel/proceso" },
+      { name: "Navigation.qualityCertification", href: "/miel/calidad" },
     ],
   },
   {
-    name: "Vino",
+    name: "Navigation.wine",
     href: "/vino",
     icon: IconGlassFullFilled,
     hasDropdown: true,
     dropdownItems: [
-      { name: "Catálogo de Vinos", href: "/vino/catalogo" },
-      { name: "Proceso de Elaboración", href: "/vino/proceso" },
-      { name: "Denominación de Origen", href: "/vino/denominacion" },
+      { name: "Navigation.wineCatalog", href: "/vino/catalogo" },
+      { name: "Navigation.elaborationProcess", href: "/vino/proceso" },
+      { name: "Navigation.originDenomination", href: "/vino/denominacion" },
     ],
   },
   {
-    name: "Sobre Nosotros",
+    name: "Navigation.aboutUs",
     href: "/sobre-nosotros",
     icon: IconUsers,
     hasDropdown: false,

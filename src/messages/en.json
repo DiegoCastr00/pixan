@@ -6,7 +6,20 @@
   },
   "Navigation": {
     "home": "Home",
-    "about": "About"
+    "about": "About",
+    "certificates": "Certificates",
+    "viewCertificates": "View Certificates",
+    "requestCertificate": "Request Certificate",
+    "validateCertificate": "Validate Certificate",
+    "honey": "Honey",
+    "honeyProducts": "Honey Products",
+    "productionProcess": "Production Process",
+    "qualityCertification": "Quality and Certification",
+    "wine": "Wine",
+    "wineCatalog": "Wine Catalog",
+    "elaborationProcess": "Elaboration Process",
+    "originDenomination": "Denomination of Origin",
+    "aboutUs": "About Us"
   },
   "Metadata": {
     "title": "My Multi-language App - Home",

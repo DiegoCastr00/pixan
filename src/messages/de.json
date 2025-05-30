@@ -6,14 +6,27 @@
   },
   "Navigation": {
     "home": "Startseite",
-    "about": "Über uns"
+    "about": "Über uns",
+    "certificates": "Zertifikate",
+    "viewCertificates": "Zertifikate anzeigen",
+    "requestCertificate": "Zertifikat beantragen",
+    "validateCertificate": "Zertifikat validieren",
+    "honey": "Honig",
+    "honeyProducts": "Honigprodukte",
+    "productionProcess": "Produktionsprozess",
+    "qualityCertification": "Qualität und Zertifizierung",
+    "wine": "Wein",
+    "wineCatalog": "Weinkatalog",
+    "elaborationProcess": "Herstellungsprozess",
+    "originDenomination": "Ursprungsbezeichnung",
+    "aboutUs": "Über uns"
   },
   "Metadata": {
-    "title": "Meine Mehrsprachige App - Startseite",
+    "title": "Meine mehrsprachige App - Startseite",
     "description": "Mehrsprachige Webanwendung erstellt mit Next.js und next-intl. Vollständige Unterstützung für Spanisch, Englisch und Deutsch.",
     "keywords": "Webanwendung, mehrsprachig, Next.js, Internationalisierung, deutsch",
     "about": {
-      "title": "Über uns - Meine Mehrsprachige App",
+      "title": "Über uns - Meine mehrsprachige App",
       "description": "Erfahren Sie mehr über unsere mehrsprachige Webanwendung und unser Entwicklungsteam."
     }
   }

@@ -3,6 +3,7 @@ import { navigationItems } from "@/constants/navigation";
 import { Link } from "@/i18n/navigation";
 import { IconChevronDown } from "@tabler/icons-react";
 import AuthButtons from "./AuthButtons";
+import { useTranslations } from "next-intl";
 
 interface MobileNavigationProps {
   isMenuOpen: boolean;
@@ -14,6 +15,7 @@ const MobileNavigation = ({
   onMenuClose,
 }: MobileNavigationProps) => {
   const [activeDropdown, setActiveDropdown] = useState<number | null>(null);
+  const t = useTranslations();
 
   const toggleDropdown = (index: number) => {
     setActiveDropdown(activeDropdown === index ? null : index);
@@ -35,7 +37,7 @@ const MobileNavigation = ({
                 onClick={() => !item.hasDropdown && onMenuClose()}
               >
                 <item.icon size={20} />
-                <span className="font-medium">{item.name}</span>
+                <span className="font-medium">{t(item.name)}</span>
               </Link>
               {item.hasDropdown && (
                 <button
@@ -69,7 +71,7 @@ const MobileNavigation = ({
                       className="block text-black hover:text-emerald-200 transition-colors duration-200 py-2"
                       onClick={onMenuClose}
                     >
-                      {dropdownItem.name}
+                      {t(dropdownItem.name)}
                     </Link>
                   ))}
                 </div>
