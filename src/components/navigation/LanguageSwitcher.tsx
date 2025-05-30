@@ -23,6 +23,16 @@ export default function LanguageSwitcher() {
     setIsOpen(false);
   };
 
+  // Handle mouse enter to open dropdown
+  const handleMouseEnter = () => {
+    setIsOpen(true);
+  };
+
+  // Handle mouse leave to close dropdown
+  const handleMouseLeave = () => {
+    setIsOpen(false);
+  };
+
   // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -43,11 +53,16 @@ export default function LanguageSwitcher() {
   const currentLanguage = languages[currentLocale as keyof typeof languages];
 
   return (
-    <div className="relative" ref={dropdownRef}>
+    <div
+      className="relative"
+      ref={dropdownRef}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
       {/* Trigger Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="bg-black backdrop-blur-sm border border-white/20 text-white rounded-full px-3 py-2 
+        className="bg-dark backdrop-blur-sm border border-white/20 text-white rounded-full px-3 py-2 
                    flex items-center gap-2  transition-all duration-200 
                    shadow-lg hover:shadow-xl"
       >
@@ -72,7 +87,7 @@ export default function LanguageSwitcher() {
       {/* Dropdown Menu */}
       {isOpen && (
         <div
-          className="absolute top-full right-0 mt-2 w-48 bg-white/95 backdrop-blur-sm 
+          className="absolute top-full right-0 w-48 bg-white/95 backdrop-blur-sm 
                         border border-white/20 rounded-lg shadow-xl overflow-hidden 
                         animate-in slide-in-from-top-2 duration-200 z-[9999]"
         >
