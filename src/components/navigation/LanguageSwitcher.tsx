@@ -6,7 +6,7 @@ import { routing } from "@/i18n/routing";
 import { useState, useRef, useEffect } from "react";
 
 const languages = {
-  es: { name: "Español", flag: "🇪🇸" },
+  es: { name: "Español", flag: "🇲🇽" },
   en: { name: "English", flag: "🇺🇸" },
   de: { name: "Deutsch", flag: "🇩🇪" },
 };
@@ -47,12 +47,11 @@ export default function LanguageSwitcher() {
       {/* Trigger Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="bg-black backdrop-blur-sm border border-white/20 text-white rounded-full px-4 py-2 
+        className="bg-black backdrop-blur-sm border border-white/20 text-white rounded-full px-3 py-2 
                    flex items-center gap-2  transition-all duration-200 
                    shadow-lg hover:shadow-xl"
       >
         <span className="text-lg">{currentLanguage?.flag}</span>
-        <span className="font-medium">{currentLanguage?.name}</span>
         <svg
           className={`w-4 h-4 transition-transform duration-200 ${
             isOpen ? "rotate-180" : ""
@@ -73,9 +72,9 @@ export default function LanguageSwitcher() {
       {/* Dropdown Menu */}
       {isOpen && (
         <div
-          className="absolute top-full left-0 right-0 mt-2 bg-white/95 backdrop-blur-sm 
+          className="absolute top-full right-0 mt-2 w-48 bg-white/95 backdrop-blur-sm 
                         border border-white/20 rounded-lg shadow-xl overflow-hidden 
-                        animate-in slide-in-from-top-2 duration-200 z-50"
+                        animate-in slide-in-from-top-2 duration-200 z-[9999]"
         >
           {routing.locales.map((lang) => {
             const language = languages[lang as keyof typeof languages];

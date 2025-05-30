@@ -26,9 +26,9 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-transparent sticky top-0 z-50">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+    <header className="bg-transparent fixed top-0 left-0 right-0 z-50">
+      <div className="w-full px-32 mx-auto">
+        <div className="flex items-center justify-between h-16 relative">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3">
             <div className="w-10 h-10 bg-black rounded-full flex items-center justify-center">
@@ -39,8 +39,8 @@ const Header = () => {
             </span>
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="flex items-center space-x-8">
+          {/* Desktop Navigation - Centered */}
+          <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center">
             <nav className="hidden lg:flex items-center space-x-8 bg-black px-7 py-1 rounded-full">
               {navigationItems.map((item, index) => (
                 <div key={item.name} className="relative group">
@@ -85,21 +85,22 @@ const Header = () => {
                 </div>
               ))}
             </nav>
-            <LanguageSwitcher />
           </div>
 
           {/* Auth Buttons - Desktop */}
           <div className="hidden lg:flex items-center space-x-4">
+            <LanguageSwitcher />
+
             <Link
               href="/iniciar-sesion"
-              className="flex items-center space-x-2 text-white hover:text-emerald-200 transition-colors duration-200"
+              className="flex items-center space-x-2 bg-black text-white px-4 py-2 rounded-lg  transition-colors duration-200 font-medium"
             >
               <IconLogin size={18} />
               <span>Iniciar Sesión</span>
             </Link>
             <Link
               href="/registro"
-              className="flex items-center space-x-2 bg-white text-emerald-800 px-4 py-2 rounded-lg hover:bg-emerald-50 transition-colors duration-200 font-medium"
+              className="flex items-center space-x-2 bg-black text-white px-4 py-2 rounded-lg  transition-colors duration-200 font-medium"
             >
               <IconUserPlus size={18} />
               <span>Regístrate Gratis</span>
@@ -109,9 +110,13 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
-            className="lg:hidden p-2 text-white hover:text-emerald-200 transition-colors duration-200"
+            className="lg:hidden p-2 text-blacktransition-colors duration-200"
           >
-            {isMenuOpen ? <IconX size={24} /> : <IconMenu size={24} />}
+            {isMenuOpen ? (
+              <IconX size={24} className="text-black" />
+            ) : (
+              <IconMenu size={24} className="text-black" />
+            )}
           </button>
         </div>
 
@@ -127,7 +132,7 @@ const Header = () => {
                 <div className="flex items-center justify-between">
                   <Link
                     href={item.href}
-                    className="flex items-center space-x-3 text-white hover:text-emerald-200 transition-colors duration-200 py-3 flex-1"
+                    className="flex items-center space-x-3 text-black hover:text-emerald-200 transition-colors duration-200 py-3 flex-1"
                     onClick={() => !item.hasDropdown && setIsMenuOpen(false)}
                   >
                     <item.icon size={20} />
@@ -136,7 +141,7 @@ const Header = () => {
                   {item.hasDropdown && (
                     <button
                       onClick={() => toggleDropdown(index)}
-                      className="p-2 text-white hover:text-emerald-200 transition-colors duration-200"
+                      className="p-2 text-black  transition-colors duration-200"
                     >
                       <IconChevronDown
                         size={20}
@@ -162,7 +167,7 @@ const Header = () => {
                         <Link
                           key={dropdownItem.name}
                           href={dropdownItem.href}
-                          className="block text-emerald-200 hover:text-white transition-colors duration-200 py-2"
+                          className="block text-black hover:text-emerald-200 transition-colors duration-200 py-2"
                           onClick={() => setIsMenuOpen(false)}
                         >
                           {dropdownItem.name}
@@ -178,7 +183,7 @@ const Header = () => {
             <div className="pt-4 space-y-3 border-t border-emerald-600">
               <Link
                 href="/iniciar-sesion"
-                className="flex items-center space-x-3 text-white hover:text-emerald-200 transition-colors duration-200 py-3"
+                className="flex items-center space-x-3 text-black hover:text-emerald-200 transition-colors duration-200 py-3"
                 onClick={() => setIsMenuOpen(false)}
               >
                 <IconLogin size={20} />

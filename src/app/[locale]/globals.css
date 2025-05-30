@@ -1,8 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #EFE8DC;
   --foreground: #171717;
+  --primary: #EFE8DC;
+  --secondary: #EFE8DC;
+  --tertiary: #171717;
+  --quaternary: #ffffff;
+  --quinary: #000000;
+  --senary: #EFE8DC;
+  --septenary: #171717;
 }
 
 @theme inline {
