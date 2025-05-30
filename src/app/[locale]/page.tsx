@@ -6,12 +6,14 @@ export default function HomePage() {
   const userName = "Usuario";
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen ">
+    <div className="flex flex-col items-center justify-center text-black ">
       <h1>{t("title")}</h1>
       <p>{t("greeting", { name: userName })}</p>
       <p>{t("description")}</p>
       <nav>
-        <p>Desde Navigation: {useTranslations("Navigation")("home")}</p>
+        <p className="text-black">
+          Desde Navigation: {useTranslations("Navigation")("home")}
+        </p>
       </nav>
     </div>
   );

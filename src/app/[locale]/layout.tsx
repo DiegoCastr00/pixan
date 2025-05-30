@@ -69,7 +69,7 @@ export default async function RootLayout({
           crossOrigin="anonymous"
         />
       </head>
-      <body className={inter.className}>
+      <body className={inter.className + " bg-[#EFE8DC]"}>
         <NextIntlClientProvider locale={locale}>
           <Header />
           {children}
