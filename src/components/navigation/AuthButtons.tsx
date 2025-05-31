@@ -13,10 +13,10 @@ const AuthButtons = ({
 }: AuthButtonsProps) => {
   if (variant === "mobile") {
     return (
-      <div className="pt-4 space-y-3 border-t border-emerald-600">
+      <div className="space-y-4">
         <Link
           href="/iniciar-sesion"
-          className="flex items-center space-x-3 text-black hover:text-emerald-200 transition-colors duration-200 py-3"
+          className="flex items-center justify-center space-x-3 text-gray-900 bg-gray-100 hover:bg-gray-200 transition-colors duration-200 py-4 px-6 rounded-xl font-medium text-base"
           onClick={onItemClick}
         >
           <IconLogin size={20} />
@@ -24,7 +24,7 @@ const AuthButtons = ({
         </Link>
         <Link
           href="/registro"
-          className="flex items-center space-x-3 bg-white text-emerald-800 px-4 py-3 rounded-lg hover:bg-emerald-50 transition-colors duration-200 font-medium"
+          className="flex items-center justify-center space-x-3 bg-emerald-600 text-white hover:bg-emerald-700 transition-colors duration-200 py-4 px-6 rounded-xl font-medium text-base shadow-lg"
           onClick={onItemClick}
         >
           <IconUserPlus size={20} />

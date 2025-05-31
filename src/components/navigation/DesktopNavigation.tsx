@@ -4,13 +4,25 @@ import { Link } from "@/i18n/navigation";
 import { IconChevronDown } from "@tabler/icons-react";
 import { useTranslations } from "next-intl";
 
-const DesktopNavigation = () => {
+interface DesktopNavigationProps {
+  variant?: "default" | "compact";
+}
+
+const DesktopNavigation = ({ variant = "default" }: DesktopNavigationProps) => {
   const [activeDropdown, setActiveDropdown] = useState<number | null>(null);
   const t = useTranslations();
 
+  const isCompact = variant === "compact";
+
   return (
     <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center">
-      <nav className="hidden lg:flex items-center space-x-8 bg-dark px-7 py-1 rounded-full">
+      <nav
+        className={`hidden lg:flex items-center bg-dark rounded-full ${
+          isCompact
+            ? "space-x-4 px-4 py-1"
+            : "space-x-6 xl:space-x-8 px-5 xl:px-7 py-1"
+        }`}
+      >
         {navigationItems.map((item, index) => (
           <div key={item.name} className="relative group">
             <Link
@@ -18,11 +30,17 @@ const DesktopNavigation = () => {
               className="flex items-center space-x-1 text-white hover:text-emerald-200 transition-colors duration-200 py-2"
               onMouseEnter={() => item.hasDropdown && setActiveDropdown(index)}
             >
-              <item.icon size={18} />
-              <span className="font-medium">{t(item.name)}</span>
+              <item.icon size={isCompact ? 16 : 18} />
+              <span
+                className={`font-medium ${
+                  isCompact ? "text-xs" : "text-sm xl:text-base"
+                }`}
+              >
+                {t(item.name)}
+              </span>
               {item.hasDropdown && (
                 <IconChevronDown
-                  size={16}
+                  size={isCompact ? 14 : 16}
                   className={`transition-transform duration-200 ${
                     activeDropdown === index ? "rotate-180" : ""
                   }`}

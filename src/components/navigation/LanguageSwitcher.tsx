@@ -11,7 +11,15 @@ const languages = {
   de: { name: "Deutsch", flag: "🇩🇪" },
 };
 
-export default function LanguageSwitcher() {
+interface LanguageSwitcherProps {
+  variant?: "desktop" | "mobile";
+  onLanguageChange?: () => void;
+}
+
+export default function LanguageSwitcher({
+  variant = "desktop",
+  onLanguageChange,
+}: LanguageSwitcherProps) {
   const router = useRouter();
   const pathname = usePathname();
   const currentLocale = useLocale();
@@ -21,16 +29,21 @@ export default function LanguageSwitcher() {
   const handleChange = (newLocale: string) => {
     router.replace(pathname, { locale: newLocale });
     setIsOpen(false);
+    onLanguageChange?.();
   };
 
-  // Handle mouse enter to open dropdown
+  // Handle mouse enter to open dropdown (desktop only)
   const handleMouseEnter = () => {
-    setIsOpen(true);
+    if (variant === "desktop") {
+      setIsOpen(true);
+    }
   };
 
-  // Handle mouse leave to close dropdown
+  // Handle mouse leave to close dropdown (desktop only)
   const handleMouseLeave = () => {
-    setIsOpen(false);
+    if (variant === "desktop") {
+      setIsOpen(false);
+    }
   };
 
   // Close dropdown when clicking outside
@@ -52,6 +65,47 @@ export default function LanguageSwitcher() {
 
   const currentLanguage = languages[currentLocale as keyof typeof languages];
 
+  // Mobile variant - simple list
+  if (variant === "mobile") {
+    return (
+      <div className="space-y-2">
+        {routing.locales.map((lang) => {
+          const language = languages[lang as keyof typeof languages];
+          const isSelected = lang === currentLocale;
+
+          return (
+            <button
+              key={lang}
+              onClick={() => handleChange(lang)}
+              className={`w-full flex items-center gap-3 px-3 py-3 text-left rounded-lg transition-colors duration-150 ${
+                isSelected
+                  ? "bg-emerald-100 text-emerald-700 border border-emerald-200"
+                  : "text-gray-700 hover:bg-gray-50 border border-gray-200"
+              }`}
+            >
+              <span className="text-lg">{language?.flag}</span>
+              <span className="font-medium">{language?.name}</span>
+              {isSelected && (
+                <svg
+                  className="w-4 h-4 ml-auto text-emerald-600"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              )}
+            </button>
+          );
+        })}
+      </div>
+    );
+  }
+
+  // Desktop variant - dropdown
   return (
     <div
       className="relative"
