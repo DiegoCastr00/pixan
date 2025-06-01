@@ -12,12 +12,12 @@ const MobileMenuButton = ({
   return (
     <button
       onClick={toggleMenu}
-      className="lg:hidden p-2 text-black transition-colors duration-200"
+      className="lg:hidden p-2 text-white bg-dark rounded-lg transition-colors duration-200"
     >
       {isMenuOpen ? (
-        <IconX size={24} className="text-black" />
+        <IconX size={24} className="text-white" />
       ) : (
-        <IconMenu size={24} className="text-black" />
+        <IconMenu size={24} className="text-white" />
       )}
     </button>
   );
