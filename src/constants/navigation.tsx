@@ -12,7 +12,6 @@ export const navigationItems = [
     icon: IconFileCertificate,
     hasDropdown: true,
     dropdownItems: [
-      { name: "Navigation.viewCertificates", href: "/certificados" },
       {
         name: "Navigation.requestCertificate",
         href: "/certificados/solicitar",
@@ -24,6 +23,7 @@ export const navigationItems = [
     name: "Navigation.honey",
     href: "/miel",
     icon: IconCoffee,
+    hasDropdown: true,
     dropdownItems: [
       { name: "Navigation.honeyProducts", href: "/miel/productos" },
       { name: "Navigation.productionProcess", href: "/miel/proceso" },

@@ -46,7 +46,7 @@ const AuthButtons = ({
       </Link>
       <Link
         href="/registro"
-        className="flex items-center justify-center space-x-3 bg-emerald-600 text-white hover:bg-emerald-700 transition-colors duration-200 py-2 px-6 rounded-xl font-medium text-base shadow-lg"
+        className="flex items-center justify-center space-x-2 bg-emerald-600 text-white hover:bg-emerald-700 transition-colors duration-200 py-2 px-4 rounded-xl font-medium text-base shadow-lg"
       >
         <IconUserPlus size={18} />
         <span>Regístrate Gratis</span>

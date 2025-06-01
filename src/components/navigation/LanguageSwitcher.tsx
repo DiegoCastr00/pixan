@@ -154,10 +154,10 @@ export default function LanguageSwitcher({
                 key={lang}
                 onClick={() => handleChange(lang)}
                 className={`w-full flex items-center gap-3 px-4 py-3 text-left 
-                           hover:bg-blue-50 transition-colors duration-150 
+                           hover:bg-emerald-50 transition-colors duration-150 
                            ${
                              isSelected
-                               ? "bg-blue-100 text-blue-700"
+                               ? "bg-emerald-100 text-emerald-700"
                                : "text-gray-700"
                            }`}
               >
@@ -165,7 +165,7 @@ export default function LanguageSwitcher({
                 <span className="font-medium">{language?.name}</span>
                 {isSelected && (
                   <svg
-                    className="w-4 h-4 ml-auto text-blue-600"
+                    className="w-4 h-4 ml-auto text-emerald-600"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
