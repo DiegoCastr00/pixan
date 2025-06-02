@@ -22,7 +22,6 @@
     "aboutUs": "Sobre Nosotros"
   },
   "Metadata": {
-    "title": "Sin nombre",
     "description": "Aplicación web multiidioma creada con Next.js y next-intl. Soporte completo para español, inglés y alemán.",
     "keywords": "aplicación web, multiidioma, Next.js, internacionalización, español",
     "about": {

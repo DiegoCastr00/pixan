@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
-import { Link } from "@/i18n/navigation";
-import LanguageSwitcher from "../../components/navigation/LanguageSwitcher";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import { generatePageMetadata } from "@/lib/metadata";
@@ -36,7 +34,7 @@ export default async function RootLayout({
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "Mi App Multi-idioma",
+    name: "Pixan Chenes",
     url: `${
       process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000"
     }/${locale}`,

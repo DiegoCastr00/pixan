@@ -22,7 +22,6 @@
     "aboutUs": "Über uns"
   },
   "Metadata": {
-    "title": "Meine mehrsprachige App - Startseite",
     "description": "Mehrsprachige Webanwendung erstellt mit Next.js und next-intl. Vollständige Unterstützung für Spanisch, Englisch und Deutsch.",
     "keywords": "Webanwendung, mehrsprachig, Next.js, Internationalisierung, deutsch",
     "about": {

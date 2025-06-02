@@ -22,7 +22,6 @@
     "aboutUs": "About Us"
   },
   "Metadata": {
-    "title": "My Multi-language App - Home",
     "description": "Multi-language web application built with Next.js and next-intl. Full support for Spanish, English, and German.",
     "keywords": "web application, multilingual, Next.js, internationalization, english",
     "about": {
