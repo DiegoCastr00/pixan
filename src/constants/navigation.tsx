@@ -41,10 +41,4 @@ export const navigationItems = [
       { name: "Navigation.originDenomination", href: "/vino/denominacion" },
     ],
   },
-  {
-    name: "Navigation.aboutUs",
-    href: "/sobre-nosotros",
-    icon: IconUsers,
-    hasDropdown: false,
-  },
 ];
